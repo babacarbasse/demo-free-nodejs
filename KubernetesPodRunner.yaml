@@ -1,7 +1,7 @@
 apiVersion: 'v1'
 kind: 'Pod'
 metadata:
-  namespace: baamtu-utils
+  namespace: utils
   labels:
     jenkins-slave: jenkins-job-runner
   name: jenkins-job-runner
