@@ -110,10 +110,10 @@ pipeline {
                 git credentialsId: 'GIT_DEVOPS_BAAMTU', url: 'https://github.com/babacarbasse/demo-free-nodejs-chart.git', branch: 'master'
 
                 sh '''
-                    git config --global user.email "babacar.niang@baamtu.com"
+                    git config --global user.email "babacar.basse@esp.sn"
                     git config --global user.name "Babacar Niang"
                     git remote remove origin
-                    git remote add origin https://$GIT_DEVOPS_USER:$GIT_DEVOPS_PWD@github.com/babacarbasse/demo-free-nodejs-chart.git
+                    git remote add origin https://github.com/babacarbasse/demo-free-nodejs-chart.git
                     git pull origin master
                 '''
             }
