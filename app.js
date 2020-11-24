@@ -34,8 +34,6 @@ const logRequestStart = (req, res, next) => {
   next();
 };
 
-// Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36 - MESSAGE
-
 app.use(logRequestStart);
 app.use("/", routes);
 app.use("/cats", cats);
