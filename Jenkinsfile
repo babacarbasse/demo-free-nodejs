@@ -107,13 +107,13 @@ pipeline {
         stage('set git internal-charts-manifests access') {
             steps {
                 sh 'rm -rf ./*'
-                git credentialsId: 'GIT_DEVOPS_BAAMTU', url: 'http://gitlab.baamtu.com/datamation/devops/internal-charts-manifests.git', branch: 'master'
+                git credentialsId: 'GIT_DEVOPS_BAAMTU', url: 'https://github.com/babacarbasse/demo-free-nodejs-chart.git', branch: 'master'
 
                 sh '''
                     git config --global user.email "babacar.niang@baamtu.com"
                     git config --global user.name "Babacar Niang"
                     git remote remove origin
-                    git remote add origin https://$GIT_DEVOPS_USER:$GIT_DEVOPS_PWD@$gitlab.baamtu.com/datamation/devops/internal-charts-manifests.git
+                    git remote add origin https://$GIT_DEVOPS_USER:$GIT_DEVOPS_PWD@github.com/babacarbasse/demo-free-nodejs-chart.git
                     git pull origin master
                 '''
             }
