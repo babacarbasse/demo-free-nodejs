@@ -1,6 +1,8 @@
 pipeline {
     agent {
-        kubernetes {}
+        kubernetes {
+            yamlFile 'KubernetesPodRunner.yaml'
+        }
     }
     environment {
         DOCKER_USERNAME = credentials('DOCKER_USERNAME')
